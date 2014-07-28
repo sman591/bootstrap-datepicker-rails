@@ -7,7 +7,7 @@ task :update do
   if Dir.exist?('bootstrap-datepicker-src')
     system("cd bootstrap-datepicker-src && git checkout release && git pull && cd ..")
   else
-    system("git clone git://github.com/eternicode/bootstrap-datepicker.git bootstrap-datepicker-src")
+    system("git clone git://github.com/sman591/bootstrap-datepicker.git bootstrap-datepicker-src")
     system("cd bootstrap-datepicker-src && git checkout release && cd ..")
   end
   system("cp bootstrap-datepicker-src/css/datepicker.css vendor/assets/stylesheets/bootstrap-datepicker.css")

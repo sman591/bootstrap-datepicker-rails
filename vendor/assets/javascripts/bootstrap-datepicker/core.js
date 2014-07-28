@@ -63,7 +63,7 @@
 				this.push.apply(this, new_array);
 			},
 			clear: function(){
-				this.splice(0);
+				this.length = 0;
 			},
 			copy: function(){
 				var a = new DateArray();
@@ -1017,6 +1017,9 @@
 			if (!date){
 				this.dates.clear();
 			}
+			if (this.o.multidate === 1 && ix === 0){
+                // single datepicker, don't remove selected date
+            }
 			else if (ix !== -1){
 				this.dates.remove(ix);
 			}
